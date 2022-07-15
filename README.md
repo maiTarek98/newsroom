@@ -1,22 +1,19 @@
-# My Custom Dashboard 
+# Small Blog 
 ##### Project version : v1
 
-##### A small dashboard has laratrust permissions and roles, CRUD admins, CRUD users, setting and Console Charts to facilitate and integrate it in any other project. And save the time of building the users, admin, roles and permission module again.
+##### A small blog contain slider has latest news and show categories of news and split a page of categories that contain some of news then to get to its single.
+admin has its dashboard he store an image and an cover image for a new and small description
 
 ## Technologies Used
 
 - Laravel
 - MySQL Database
+- Repository Design Pattern 
 
-## Features
+### HomePage Screenshot
+![homepage](https://github.com/maiTarek98/newsroom/blob/main/public/images/homepage.png)
 
-- Admin Guard
-- Laratrust Package 
-- CRUD Users
-- CRUD Admin
-- Setting Table
-- Yajra Datatable
-- Intervention Image package
-- Collection Html Form
-- ConsoleTv Charts Package
-- stevebauman/Location package
+### Dashboard Screenshots
+![show blogs](https://github.com/maiTarek98/newsroom/blob/main/public/images/showblogs.png)
+![create blog](https://github.com/maiTarek98/newsroom/blob/main/public/images/storeblog.png)
+
