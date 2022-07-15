@@ -19,6 +19,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">
+                    	@if($blogs->count() > 0)
                     	@foreach($blogs as $blog)
                         <div class="col-lg-6">
                             <div class="position-relative mb-3">
@@ -35,6 +36,10 @@
                             </div>
                         </div>
                         @endforeach
+                        @else
+
+                        <h3>No Data To be shown</h3>
+                        @endif
                     </div>
                     
                     <div class="mb-3">

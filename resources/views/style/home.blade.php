@@ -26,7 +26,7 @@
                 <div class="col-lg-8">
                     <div class="owl-carousel owl-carousel-2 carousel-item-1 position-relative mb-3 mb-lg-0">
                         <div class="position-relative overflow-hidden" style="height: 435px;">
-                            <img class="img-fluid h-100" src="img/news-700x435-1.jpg" style="object-fit: cover;">
+                            <img class="img-fluid h-100" src="{{url('/newsroom')}}/img/news-700x435-1.jpg" style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-1">
                                     <a class="text-white" href="">Technology</a>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="position-relative overflow-hidden" style="height: 435px;">
-                            <img class="img-fluid h-100" src="img/news-700x435-2.jpg" style="object-fit: cover;">
+                            <img class="img-fluid h-100" src="{{url('/newsroom')}}/img/news-700x435-2.jpg" style="object-fit: cover;">
                             <div class="overlay">
                                 <div class="mb-1">
                                     <a class="text-white" href="">Technology</a>
@@ -57,7 +57,7 @@
                     @foreach($categorys as $cat)
                     <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
                         <img class="img-fluid w-100 h-100" src="{{url('storage/'.$cat->category_image)}}" style="object-fit: cover;">
-                        <a href="" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+                        <a href="{{url('/blogs/'.$cat->id)}}" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
                             {{$cat->category_name}}
                         </a>
                     </div>
@@ -79,7 +79,7 @@
             </div>
             <div class="owl-carousel owl-carousel-2 carousel-item-4 position-relative">
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid w-100 h-100" src="img/news-300x300-1.jpg" style="object-fit: cover;">
+                    <img class="img-fluid w-100 h-100" src="{{url('/newsroom')}}/img/news-300x300-1.jpg" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-1" style="font-size: 13px;">
                             <a class="text-white" href="">Technology</a>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid w-100 h-100" src="img/news-300x300-2.jpg" style="object-fit: cover;">
+                    <img class="img-fluid w-100 h-100" src="{{url('/newsroom')}}/img/news-300x300-2.jpg" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-1" style="font-size: 13px;">
                             <a class="text-white" href="">Technology</a>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid w-100 h-100" src="img/news-300x300-3.jpg" style="object-fit: cover;">
+                    <img class="img-fluid w-100 h-100" src="{{url('/newsroom')}}/img/news-300x300-3.jpg" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-1" style="font-size: 13px;">
                             <a class="text-white" href="">Technology</a>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid w-100 h-100" src="img/news-300x300-4.jpg" style="object-fit: cover;">
+                    <img class="img-fluid w-100 h-100" src="{{url('/newsroom')}}/img/news-300x300-4.jpg" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-1" style="font-size: 13px;">
                             <a class="text-white" href="">Technology</a>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="position-relative overflow-hidden" style="height: 300px;">
-                    <img class="img-fluid w-100 h-100" src="img/news-300x300-5.jpg" style="object-fit: cover;">
+                    <img class="img-fluid w-100 h-100" src="{{url('/newsroom')}}/img/news-300x300-5.jpg" style="object-fit: cover;">
                     <div class="overlay">
                         <div class="mb-1" style="font-size: 13px;">
                             <a class="text-white" href="">Technology</a>
@@ -155,7 +155,7 @@
                             <img class="img-fluid w-100" src="{{url('/storage/'.$val->blog_image)}}" style="object-fit: cover;">
                             <div class="overlay position-relative bg-light">
                                 <div class="mb-2" style="font-size: 13px;">
-                                    <a href="">{{$catblog->category_name}}</a>
+                                    <a href="{{url('/blogs/'.$catblog->id)}}">{{$catblog->category_name}}</a>
                                     <span class="px-1">/</span>
                                     <span>{{\Carbon\Carbon::parse($catblog->created_at)->format('d M Y')}}</span>
                                 </div>
@@ -238,7 +238,7 @@
 
                     <!-- Ads Start -->
                     <div class="mb-3 pb-3">
-                        <a href=""><img class="img-fluid" src="img/news-500x280-4.jpg" alt=""></a>
+                        <a href=""><img class="img-fluid" src="{{url('/newsroom')}}/img/news-500x280-4.jpg" alt=""></a>
                     </div>
                     <!-- Ads End -->
 

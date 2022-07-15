@@ -25,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('*', function ($view)
         {
     
+        $cats = \App\Models\Category::orderBy('id','DESC')->take(12)->get();
+
         $top_trend= \App\Models\Blog::where('top_trending','yes')->orderBy('id','DESC')->take(10)->get();
         $bottom_trends = \App\Models\Blog::where('bottom_trending','yes')->orderBy('id','DESC')->take(5)->get();
         $setting=\App\Models\Setting::findOrFail(1);
@@ -40,7 +42,7 @@ class AppServiceProvider extends ServiceProvider
         ->whatsapp()
         ->telegram();
         
-        $view->with(compact('setting','top_trend','bottom_trends','socialShare'));
+        $view->with(compact('setting','top_trend','bottom_trends','socialShare','cats'));
         });
 
     }
